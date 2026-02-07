@@ -4,8 +4,8 @@ namespace Ronma.Protocol.Interface.Service
 {
     public interface IBusService : ICoreService
     {
-        void Publish(ServiceInfo info, Packet packet);
+        Task PublishAsync(ServiceInfo info, Packet packet);
 
-        bool Subscribe(ServiceInfo info, Func<Packet, Task<bool>> processor);
+        Task<bool> SubscribeAsync(ServiceInfo info, Func<Packet, Task<bool>> processor);
     }
 }
