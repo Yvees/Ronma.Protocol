@@ -18,7 +18,7 @@ namespace Ronma.Protocol.Structure
         { 
             Channel = channel;
             Service = service;
-            Commands = [..commands];
+            Commands = [.. commands];
         }
         public BusChannel Channel { get; init; }
 
