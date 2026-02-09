@@ -8,4 +8,13 @@ namespace Ronma.Protocol.Enums
         FollowUp,
         System
     }
+
+    public enum AgentActionType
+    {
+        Think,
+        ToolCall,
+        FollowUp,
+        Final,
+        Error
+    }
 }
