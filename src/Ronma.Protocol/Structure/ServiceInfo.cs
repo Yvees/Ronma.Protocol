@@ -14,27 +14,26 @@ namespace Ronma.Protocol.Structure
             Service = service;
         }
 
-        public ServiceInfo(BusChannel channel, string service, string command, string desc)
+        public ServiceInfo(BusChannel channel, string service, string[] commands, string desc = "")
         { 
             Channel = channel;
             Service = service;
-            Command = command;
-            Desc = desc;
+            Commands = [..commands];
         }
         public BusChannel Channel { get; init; }
 
         public string Service {  get; init; }
 
-        public string Command { get; init; }
-
         public string Desc { get; init; }
+
+        public List<string> Commands { get; init; } = new List<string>();
 
         public override string ToString()
         {
-            if (string.IsNullOrWhiteSpace(Command))
+            if (!Commands.Any())
                 return $"{Channel}.{Service}".ToLower();
             else
-                return $"{Channel}.{Service}.{Command}".ToLower();
+                return $"{Channel}.{Service}.{Commands[0]}".ToLower();
         }
     }
 }
