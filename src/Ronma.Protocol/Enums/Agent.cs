@@ -12,7 +12,7 @@ namespace Ronma.Protocol.Enums
     public enum AgentActionType
     {
         Think,
-        ToolCall,
+        ServiceCall,
         FollowUp,
         Final,
         Error
