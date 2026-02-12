@@ -28,12 +28,6 @@ namespace Ronma.Protocol.Structure
 
         public List<string> Commands { get; init; } = new List<string>();
 
-        public override string ToString()
-        {
-            if (!Commands.Any())
-                return $"{Channel}.{Service}".ToLower();
-            else
-                return $"{Channel}.{Service}.{Commands[0]}".ToLower();
-        }
+        public override string ToString() => $"{Channel}.{Service}".ToLower();
     }
 }
