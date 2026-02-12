@@ -12,6 +12,7 @@ namespace Ronma.Protocol.Structure
         {
             Channel = channel;
             Service = service;
+            Desc = string.Empty;
         }
 
         public ServiceInfo(BusChannel channel, string service, string[] commands, string desc = "")
@@ -19,6 +20,7 @@ namespace Ronma.Protocol.Structure
             Channel = channel;
             Service = service;
             Commands = [.. commands];
+            Desc = desc ?? string.Empty;
         }
         public BusChannel Channel { get; init; }
 
