@@ -4,7 +4,6 @@
     {
         Input,
         Output,
-        Internal,
-        Service
+        Internal
     }
 }
