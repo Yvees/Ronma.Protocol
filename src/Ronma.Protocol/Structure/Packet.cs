@@ -12,7 +12,7 @@ namespace Ronma.Protocol.Structure
         {
             Service = service;
             Command = command;
-            Args = args;
+            Args = args ?? [];
         }
 
         public Packet(string service, string command, string sender, List<byte[]> args)
@@ -20,7 +20,7 @@ namespace Ronma.Protocol.Structure
             Service = service;
             Command = command;
             Sender = sender;
-            Args = args;
+            Args = args ?? [];
         }
 
         public string Service { get; set; }
@@ -33,7 +33,7 @@ namespace Ronma.Protocol.Structure
 
         public string SessionId { get; set; } = CreateUuid();
 
-        public List<byte[]> Args { get; set; }
+        public List<byte[]> Args { get; set; } = [];
 
         private static string CreateUuid()
         {
