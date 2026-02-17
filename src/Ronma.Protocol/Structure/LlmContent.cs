@@ -1,4 +1,4 @@
-﻿namespace Ronma.Protocol.Structure
+namespace Ronma.Protocol.Structure
 {
     public class LlmContent
     {
@@ -8,6 +8,6 @@
 
         public string Prompt { get; set; } = string.Empty;
 
-        public List<LlmContentPayload> Payloads { get; set; }        
+        public List<LlmContentPayload> Payloads { get; set; } = [];
     }
 }
