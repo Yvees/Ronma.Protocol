@@ -2,7 +2,11 @@
 {
     public class LlmContent
     {
-        public string Message { get; set; }
+        public string Model { get; set; } = string.Empty;
+
+        public bool Stream { get; set; }
+
+        public string Prompt { get; set; } = string.Empty;
 
         public List<LlmContentPayload> Payloads { get; set; }        
     }

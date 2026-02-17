@@ -4,11 +4,6 @@ namespace Ronma.Protocol.Structure
 {
     public class LlmContentPayload
     {
-        public LlmContentPayload()
-        { 
-        
-        }
-
         public LlmContentPayload(LlmContentPayloadType type, byte[] content)
         {
             Type = type;
@@ -19,6 +14,5 @@ namespace Ronma.Protocol.Structure
         public LlmContentPayloadType Type { get; set; }
 
         public byte[] Content { get; set; }
-
     }
 }

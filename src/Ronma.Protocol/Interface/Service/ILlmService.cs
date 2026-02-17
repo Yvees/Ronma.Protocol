@@ -6,6 +6,6 @@ namespace Ronma.Protocol.Interface.Service
     {
         LlmEndpoint Endpoint { get; set; }
 
-        Task<LlmContent> Perform(LlmContent content);
+        Task<LlmResult> Perform(LlmContent content);
     }
 }
