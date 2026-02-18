@@ -1,10 +1,12 @@
-﻿namespace Ronma.Protocol.Structure
+﻿using Ronma.Protocol.Enums;
+
+namespace Ronma.Protocol.Structure
 {
     public class LlmResult
     {
         public bool Success { get; set; }
 
-        public string Provider { get; set; } = string.Empty;
+        public LlmProvider Provider { get; set; } = LlmProvider.Ollama;
 
         public string Model { get; set; } = string.Empty;
 
