@@ -15,7 +15,7 @@ namespace Ronma.Protocol.Structure
             Desc = string.Empty;
         }
 
-        public ServiceInfo(BusChannel channel, string service, string[] commands, string desc)
+        public ServiceInfo(BusChannel channel, string service, ServiceCommand[] commands, string desc)
         { 
             Channel = channel;
             Service = service;
@@ -28,7 +28,7 @@ namespace Ronma.Protocol.Structure
 
         public string Desc { get; init; }
 
-        public List<string> Commands { get; init; } = new List<string>();
+        public List<ServiceCommand> Commands { get; init; } = new List<ServiceCommand>();
 
         public override string ToString() => $"{Channel}.{Service}".ToLower();
     }
