@@ -22,6 +22,8 @@ namespace Ronma.Protocol.Structure
 
         public int TotalTokens { get; set; }
 
+        public string ReasoningSummary { get; set; } = string.Empty;
+
         public string Raw { get; set; } = string.Empty;
     }
 }
