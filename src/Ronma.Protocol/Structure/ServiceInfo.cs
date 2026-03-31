@@ -6,27 +6,33 @@ namespace Ronma.Protocol.Structure
     {
         public ServiceInfo()
         {
-
+            Service = string.Empty;
+            Desc = string.Empty;
+            Guidance = string.Empty;
         }
         public ServiceInfo(BusChannel channel, string service)
         {
             Channel = channel;
             Service = service;
             Desc = string.Empty;
+            Guidance = string.Empty;
         }
 
-        public ServiceInfo(BusChannel channel, string service, ServiceCommand[] commands, string desc)
+        public ServiceInfo(BusChannel channel, string service, ServiceCommand[] commands, string desc, string guidance = "")
         { 
             Channel = channel;
             Service = service;
             Commands = [.. commands];
             Desc = desc ?? string.Empty;
+            Guidance = guidance ?? string.Empty;
         }
         public BusChannel Channel { get; init; }
 
         public string Service {  get; init; }
 
         public string Desc { get; init; }
+
+        public string Guidance { get; init; }
 
         public List<ServiceCommand> Commands { get; init; } = new List<ServiceCommand>();
 
