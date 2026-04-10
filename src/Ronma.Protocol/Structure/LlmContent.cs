@@ -8,6 +8,10 @@ namespace Ronma.Protocol.Structure
 
         public string Prompt { get; set; } = string.Empty;
 
+        public string ResponseSchemaName { get; set; } = string.Empty;
+
+        public string ResponseSchema { get; set; } = string.Empty;
+
         public List<LlmContentPayload> Payloads { get; set; } = [];
     }
 }
